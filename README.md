@@ -26,6 +26,25 @@ answer, including your reasoning, to this markdown file.
 
 ## My Runtime Analysis
 
+First my code iterates over $m$ edges, as it adds source and destination vertices
+to a set, $\Theta(m)$.  
+
+Then we loop over $n$ unique vertices, to iitialize the distance array, $\Theta(n)$.  
+
+Once we have everything set up, we iterate through our $n$ vertices, until each
+one has been visited. During each iteration, we work through $n$ vertices while
+trying to find the nearest unvisited vertex. Additionally we check our $m$ edges
+working to find all edges originating from our current vertex, $\Theta(m)$. Since the
+while loop runs up to $n$ times, during which we perform $n + m$ work, we get
+$\Theta(n \cdot (n + m)) = \Theta(n^2 + nm)$  
+
+Finally we work through $n$ vertices making our key/value pairs for the best
+distance, $\Theta(n)$.  
+
+Altogether that means my code does $\Theta(m) + \Theta(n) + \Theta(n^2 + nm) +
+\Theta(n)$ work. Not accounting for lower order terms or constants my code has
+a runtime complexity of $\Theta(n^2)$  
+
 ## Sources
 
 I used the spread operator you showed us some weeks back. 😎  
