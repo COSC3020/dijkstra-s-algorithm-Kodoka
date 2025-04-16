@@ -23,3 +23,22 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## My Runtime Analysis
+
+## Sources
+
+I used the spread operator you showed us some weeks back. 😎  
+
+I used the following site to help plan my code:  
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/#  
+
+I watched the following video to help with understanding Dijkstra's conceptually:  
+https://www.youtube.com/watch?v=EFg3u_E6eHU  
+
+I reviewed cniemitalo's(commit b4886b2) test code to help get started writing my own:  
+https://github.com/COSC3020/dijkstra-s-algorithm-cniemitalo/blob/main/code.test.js  
+
+## Plagiarism Notice
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
