@@ -23,3 +23,43 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## My Runtime Analysis
+
+First my code iterates over $m$ edges, as it adds source and destination vertices
+to a set, $\Theta(m)$.  
+
+Then we loop over $n$ unique vertices, to iitialize the distance array, $\Theta(n)$.  
+
+Once we have everything set up, we iterate through our $n$ vertices, until each
+one has been visited. During each iteration, we work through $n$ vertices while
+trying to find the nearest unvisited vertex. Additionally we check our $m$ edges
+working to find all edges originating from our current vertex, $\Theta(m)$. Since the
+while loop runs up to $n$ times, during which we perform $n + m$ work, we get
+$\Theta(n \cdot (n + m)) = \Theta(n^2 + nm)$  
+
+Finally we work through $n$ vertices making our key/value pairs for the best
+distance, $\Theta(n)$.  
+
+Altogether that means my code does $\Theta(m) + \Theta(n) + \Theta(n^2 + nm) +
+\Theta(n)$ work. Not accounting for lower order terms or constants my code has
+a runtime complexity of $\Theta(n^2)$  
+
+## Sources
+
+I used the spread operator you showed us some weeks back. 😎  
+
+I used the following site to help plan my code:  
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/#  
+
+I watched the following video to help with understanding Dijkstra's conceptually:  
+https://www.youtube.com/watch?v=EFg3u_E6eHU  
+
+I reviewed cniemitalo's(commit b4886b2) test code to help get started writing my own:  
+https://github.com/COSC3020/dijkstra-s-algorithm-cniemitalo/blob/main/code.test.js  
+
+## Plagiarism Notice
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+// Lint update.
