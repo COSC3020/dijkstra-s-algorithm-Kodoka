@@ -61,3 +61,15 @@ var test4 = [[0, 1, 3],
             [3, 1, 2]];
 assert(JSON.stringify(dijkstra(test4, 1)) === JSON.stringify(
     {0:7, 1:0, 2:2, 3:3}), "Test 4 failed.");
+
+// Disconnected graph.
+// 0:0 Source
+// 1:4 0->1
+// 2:Infinity Unreachable from source
+// 3:Infinity Unreachable from source
+var test5 = [[0, 1, 4],
+            [1, 0, 4],
+            [2, 2, 0],
+            [3, 3, 0]];
+assert(JSON.stringify(dijkstra(test5, 0)) === JSON.stringify(
+    {0:0, 1:4, 2:Infinity, 3:Infinity}), "Test 5 failed.");
